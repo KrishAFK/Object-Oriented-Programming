@@ -1,0 +1,81 @@
+C++ Student Setup Guide
+=======================
+
+Files in this folder
+--------------------
+main.cpp
+    The C++ program.
+
+.vscode\tasks.json
+    Tells VS Code how to build the program.
+
+.vscode\launch.json
+    Tells VS Code how to run the program with the Run button.
+
+output\main.exe
+    The program created by VS Code when you run or build.
+
+
+Fastest way to run the program in VS Code
+-----------------------------------------
+1. Open VS Code.
+2. Open this whole folder, not the VS Code program folder.
+3. Open main.cpp.
+4. Click Run and Debug on the left side.
+5. Choose Run C++ Program if VS Code asks.
+6. Press the green play button, or press F5.
+7. Type the student name and age in the Terminal panel.
+
+Important:
+    Keep main.cpp open before pressing the green play button.
+
+If you use the small Run Code triangle above the editor:
+    This folder includes settings for the C/C++ Compile Run extension.
+    It should build and run from this project's output folder.
+
+
+Building without running
+------------------------
+1. In VS Code, open Terminal > Run Build Task.
+2. Choose Build C++ if VS Code asks.
+
+This creates output\main.exe.
+
+
+If it says "g++ was not found"
+------------------------------
+The computer needs a C++ compiler.
+
+Ask your teacher which compiler to install. A common Windows option is
+MinGW-w64. After installing it, close and reopen the terminal, then try
+the green play button again.
+
+To check whether the compiler is ready, type this in a terminal:
+
+       g++ --version
+
+If version information appears, the compiler is ready.
+
+
+Common problems
+---------------
+VS Code says EPERM or mentions C:\Program Files\Microsoft VS Code\output:
+    VS Code is not using this folder's settings yet.
+    Close VS Code.
+    Open VS Code again.
+    Use File > Open Folder and choose the folder that contains main.cpp.
+    If VS Code asks whether you trust the folder, choose Yes.
+    Open main.cpp.
+    Press F5, or use Run and Debug > Run C++ Program.
+
+VS Code says it cannot find the program:
+    Run Terminal > Run Build Task first, then press F5 again.
+
+VS Code says cppdbg is not recognized:
+    Install the Microsoft C/C++ extension in VS Code.
+
+The build fails:
+    Read the error message. It usually gives a line number in main.cpp.
+
+The output folder is missing:
+    That is okay. VS Code creates it during the build.
